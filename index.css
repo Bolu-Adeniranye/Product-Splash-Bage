@@ -1,57 +1,84 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-
     color: #404040;
 
     margin: 0;
-
 }
+
+* {
+    box-sizing: border-box;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 
 /* =================
     Typography 
-   ================= */
+   ================= 
+*/
 
-h1 {
-    font-weight: 400;
-    font-size: 2.5rem;
-    
-    text-shadow: 2px -2px 8px #000000;
-    text-transform: capitalize;
-}
+    h1 {
+        font-weight: 400;
+        font-size: 2.5rem;
+        
+        text-shadow: 0px -2px 8px #000000;
+        text-transform: capitalize;
+    }
 
-h2 {
-    font-size: 2.25rem;
+    h2 {
+        font-size: 2.25rem;
 
-    margin: 0.167em 0;
-}
+        margin: 0.167em 0;
+    }
 
-p {
-    font-size: 1.125em;
-    line-height: 1.35;
-}
+    p {
+        font-size: 1.125em;
+        line-height: 1.35;
+    }
 
-.beta-text { 
-    font-weight: 900;
+    .beta-text { 
+        font-weight: 900;
 
-    margin-top: 20px;
-}
+        text-shadow: 2px -2px 4px #000000;
 
-span {
-    color: rgb(255, 228, 159);
-}
+        margin-top: 20px;
+    }
 
-.subheading {
-    color: #575757;
+    span {
+        color: rgb(255, 228, 159);
+    }
 
-    font-weight: 900;
+    .subheading {
+        color: #575757;
 
-    margin-bottom: 0.5em;
-}
+        font-weight: 900;
 
-.beta-text,
-.subheading {
-    text-transform: uppercase;
-}
+        margin-bottom: 0.5em;
+    }
+
+    .beta-text, .top-text,
+    .subheading {
+        text-transform: uppercase;
+    }
+
+    .fine-print {
+        font-size: 0.75rem;
+        letter-spacing: 0.125rem;
+
+        color: #858585;
+    }
+
+    .top-text {
+        font-size: 0.875rem;
+        font-weight: 900;
+
+        margin: 0 auto;
+
+
+        border-top: 5px solid;
+
+        /* border-width: 1em; */
+        order: -1;
+    }
 
 /* =================
     Flex containers
@@ -69,8 +96,10 @@ span {
     Intro
    ================= */
    
-.intro { 
-    justify-content: center;
+    .intro { 
+    justify-content: space-between;
+
+
     
     text-align: center;
     color: #fff;
@@ -84,7 +113,7 @@ span {
     
     min-height: 250px;
     
-}
+    }
 
 
 /* ====================
@@ -95,22 +124,90 @@ span {
     align-items: center;
     
     padding-top: 2.5em;  
+    /* border: 2px solid red; */
 
-}
+    }
 
+    .img-main {
+        width: 200px;
 
-.img-main {
-    width: 200px;
+        border-radius: 50%;
+    }
 
-    border-radius: 50%;
-}
-
+    .main-content p, form {
+        max-width: 625px;
+    }
 
 /* =================
     Form
    ================= */
-   
+    input {
+        width: 100%;
+        
+        margin-bottom: 0.75em;
+        
+        padding: 0.5em;
 
+        border: 2px solid #d1d5db;
+        border-radius: 5px;
+    }
+
+    #input-file {
+        border: none;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        background-color: #d1d5db;
+
+    }
+
+    #input-file:hover {
+        background-color: #999ca1;
+    }
+
+    input:focus {
+        font-family: inherit;
+
+        outline: none;
+
+        border-color: rgb(194, 91, 8);
+
+        background-color: #fffaf5;
+    }
+
+    .btn {
+        font-family: inherit; 
+
+        text-transform: uppercase;
+        
+        border: none;
+        border-radius: 5px;
+        
+        width: 100%;
+    }
+    
+    .btn-primary {
+        color: white;
+
+        font-weight: bold;
+
+        background-color: rgb(194, 91, 8);
+
+        margin-top: 1em;    
+
+        opacity: 0.8;
+        
+        padding: 0.75em 0;
+    }
+
+    .btn-primary:hover, .btn-primary:focus {
+        opacity: 1;
+
+        background-color: rgb(194, 91, 8);
+
+        cursor: pointer;
+    }
 /* =================
     Media queries 
    ================= */
@@ -127,7 +224,7 @@ span {
     .intro {
         min-height: 100vh;
 
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .main-content {
