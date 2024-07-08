@@ -1,6 +1,8 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
+
     color: #404040;
+
     margin: 0;
 
 }
@@ -13,23 +15,42 @@ h1 {
     font-weight: 400;
     font-size: 2.5rem;
     
-    text-shadow: 0px 3px 6px #0000005b;
+    text-shadow: 2px -2px 8px #000000;
+    text-transform: capitalize;
 }
 
 h2 {
     font-size: 2.25rem;
+
     margin: 0.167em 0;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.35;
 }
 
 .beta-text { 
     font-weight: 900;
-    margin-top: 20px;
 
+    margin-top: 20px;
+}
+
+span {
+    color: rgb(255, 228, 159);
 }
 
 .subheading {
     color: #575757;
+
     font-weight: 900;
+
+    margin-bottom: 0.5em;
+}
+
+.beta-text,
+.subheading {
+    text-transform: uppercase;
 }
 
 /* =================
@@ -39,6 +60,9 @@ h2 {
    .intro, .main-content {
     display: flex;
     flex-direction: column;
+
+    padding-left: 2em;
+    padding-right: 2em;
    }
    
 /* =================
@@ -48,10 +72,13 @@ h2 {
 .intro { 
     justify-content: center;
     
-    color: #fff;
-    background-color: #9480e4;
-    
     text-align: center;
+    color: #fff;
+
+    background-color: rgba(99, 47, 4, 0.801);
+    background-image: url("./images/intro-bg.png");
+    background-size: cover;
+    
     
     padding: 0em 2.1875em;
     
@@ -68,13 +95,13 @@ h2 {
     align-items: center;
     
     padding-top: 2.5em;  
-    padding-left: 2em;
-    padding-right: 2em;
+
 }
 
 
 .img-main {
     width: 200px;
+
     border-radius: 50%;
 }
 
@@ -87,3 +114,37 @@ h2 {
 /* =================
     Media queries 
    ================= */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+    
+    .intro, .main-content {
+        width: 50%;
+    }
+
+    .intro {
+        min-height: 100vh;
+
+        justify-content: space-around;
+    }
+
+    .main-content {
+        justify-content: center;
+
+        padding-top: 0;
+    }
+
+    h1 {
+        font-size: 5vh;
+    }
+    
+    h2 {
+        font-size: 2.625em;
+    }
+    
+    .beta-text {
+        font-size: 1.25em;
+    }
+}
