@@ -1,0 +1,89 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+    margin: 0;
+
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    
+    text-shadow: 0px 3px 6px #0000005b;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+}
+
+.beta-text { 
+    font-weight: 900;
+    margin-top: 20px;
+
+}
+
+.subheading {
+    color: #575757;
+    font-weight: 900;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+   .intro, .main-content {
+    display: flex;
+    flex-direction: column;
+   }
+   
+/* =================
+    Intro
+   ================= */
+   
+.intro { 
+    justify-content: center;
+    
+    color: #fff;
+    background-color: #9480e4;
+    
+    text-align: center;
+    
+    padding: 0em 2.1875em;
+    
+    min-height: 250px;
+    
+}
+
+
+/* ====================
+    Main content
+   ==================== */
+
+   .main-content {
+    align-items: center;
+    
+    padding-top: 2.5em;  
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+.img-main {
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+/* =================
+    Form
+   ================= */
+   
+
+/* =================
+    Media queries 
+   ================= */
